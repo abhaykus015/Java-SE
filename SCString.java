@@ -1,44 +1,25 @@
+
 package scstring;
 
-public class SCString 
-{
-    //Cheking if a string is Binary number
+
+public class Scstring {
+
+    
     public static void main(String[] args) 
     {
-        int b=100110010;
-        
-        String str=String.valueOf(b);
-        
-        System.out.println(str.matches("[01]+"));
-        
-        
+      String str="programmer@gmail.com";
+      //String str="programmer@hotmail.com";
+      
+      int i=str.indexOf("@");
+      String uname=str.substring(0,i);
+      String domain=str.substring(i+1, str.length());
+      
+      System.out.println("Username :"+uname);
+      System.out.println("Domain :"+domain);
+      
+      int j=domain.indexOf(".");
+      String name=domain.substring(0, j);
+      System.out.println(name.equals("gmail"));
     }
     
-    /* 
-    public static void main(String[] args) 
-    {
-        
-        String str="a!B@c#1$2%3";
-        
-        str=str.replaceAll("[^a-zA-Z0-9]", "");
-                
-        System.out.println(str);
-        
-        
-    } */
-   /* 
-    Counting words in a String
-    public static void main(String[] args) 
-    {
-        
-        String str="      abc     def     gh   ijk    ";
-        
-        str=str.replaceAll("\\s+", " ").trim();
-        
-        String words[]=str.split("\\s");
-        
-        System.out.println(words.length);
-        
-        
-    }*/   
 }
